@@ -1,0 +1,19 @@
+:root h1{
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+
+:root p {
+    font-weight: 300;
+}
+
+:root button{
+    background-color: #FF5F5F;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}

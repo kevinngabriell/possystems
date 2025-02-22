@@ -1,0 +1,28 @@
+.login-container{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF; 
+    border-radius: 10px;
+    padding: 4px;
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid white;
+}
+
+.login-area{
+    color: black;
+    width: 100vw;
+    background: transparent;
+    border: 2px #FFFFFF;
+    outline: none;
+    padding: 7px;
+    padding-left: 15px;
+    font-size: 1rem;
+}
+
+.contact-area{
+    position: fixed;
+    bottom: 30px;
+}
