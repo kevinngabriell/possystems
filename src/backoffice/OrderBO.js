@@ -18,20 +18,20 @@ function OrderBO(){
 
     // Mockup menu data
     const mockMenu = [
-        { id: 1, image: require("../assets/ayamgoreng.jpeg"), name: "Ayam Goreng", category: "Ayam", description: "Ayam goreng khas Padang dengan bumbu rempah yang meresap hingga ke dalam, digoreng hingga renyah di luar dan tetap juicy di dalam." },
-        { id: 2, image: require("../assets/ayampop.jpg"), name: "Ayam Pop", category: "Ayam", description: "Ayam khas Minang yang direbus dengan air kelapa dan rempah pilihan, menghasilkan tekstur lembut dan rasa gurih yang unik. Disajikan dengan sambal khas yang menggugah selera." },
-        { id: 3, image: require("../assets/ayamgulai.jpg"), name: "Ayam Gulai", category: "Ayam", description: "Potongan ayam yang dimasak dengan kuah gulai kaya rempah, santan kental, dan cita rasa gurih pedas yang khas." },
-        { id: 4, image: require("../assets/ayampanggang.webp"), name: "Ayam Panggang", category: "Ayam", description: "Ayam bakar dengan bumbu khas Padang, dipanggang hingga kecoklatan dan beraroma harum, dengan rasa manis, pedas, dan gurih yang menyatu sempurna." },
-        { id: 5, image: require("../assets/rendangdaging.jpg"), name: "Rendang Daging", category: "Daging", description: "Hidangan ikonik khas Minang! Daging sapi dimasak perlahan dengan santan dan rempah-rempah pilihan hingga bumbu meresap sempurna, menghasilkan cita rasa gurih, pedas, dan kaya rempah." },
-        { id: 6, image: require("../assets/dendengbalado.jpg"), name: "Dendeng Balado", category: "Daging", description: "Irisan tipis daging sapi yang digoreng kering hingga renyah, lalu disiram dengan sambal balado khas Padang yang pedas dan segar, dibuat dari cabai merah besar dan tomat." },
-        { id: 7, name: "Gulai Cincang Sapi", category: "Daging", description: "Potongan daging sapi yang dimasak dalam kuah gulai berbumbu santan kental dengan aroma rempah yang kuat, menciptakan rasa gurih yang menggugah selera." },
-        { id: 8, name: "Dendeng Lambok", category: "Daging", description: "Daging sapi yang dimasak dengan cara direbus lalu digoreng hingga empuk dan juicy, kemudian disajikan dengan bumbu rempah dan sambal khas Minang." },
-        { id: 9, name: "Ikan Nila Dabu", category: "Ikan", description: "Ikan nila segar yang digoreng hingga renyah, disajikan dengan sambal dabu-dabu khas yang terdiri dari irisan cabai, tomat, dan bawang merah, memberikan rasa pedas, segar, dan gurih yang menggugah selera." },
-        { id: 10, name: "Udang Saus Padang", category: "Udang" },
-        { id: 11, name: "Udang Saus Padang", category: "Udang" },
-        { id: 12, name: "Udang Saus Padang", category: "Udang" },
-        { id: 13, name: "Udang Saus Padang", category: "Udang" },
-        { id: 14, name: "Udang Saus Padang", category: "Udang" }
+        { id: 1, price: 3, image: require("../assets/ayamgoreng.jpeg"), name: "Ayam Goreng", category: "Ayam", description: "Ayam goreng khas Padang dengan bumbu rempah yang meresap hingga ke dalam, digoreng hingga renyah di luar dan tetap juicy di dalam." },
+        { id: 2, price: 3, image: require("../assets/ayampop.jpg"), name: "Ayam Pop", category: "Ayam", description: "Ayam khas Minang yang direbus dengan air kelapa dan rempah pilihan, menghasilkan tekstur lembut dan rasa gurih yang unik. Disajikan dengan sambal khas yang menggugah selera." },
+        { id: 3, price: 3, image: require("../assets/ayamgulai.jpg"), name: "Ayam Gulai", category: "Ayam", description: "Potongan ayam yang dimasak dengan kuah gulai kaya rempah, santan kental, dan cita rasa gurih pedas yang khas." },
+        { id: 4, price: 3, image: require("../assets/ayampanggang.webp"), name: "Ayam Panggang", category: "Ayam", description: "Ayam bakar dengan bumbu khas Padang, dipanggang hingga kecoklatan dan beraroma harum, dengan rasa manis, pedas, dan gurih yang menyatu sempurna." },
+        { id: 5, price: 3, image: require("../assets/rendangdaging.jpg"), name: "Rendang Daging", category: "Daging", description: "Hidangan ikonik khas Minang! Daging sapi dimasak perlahan dengan santan dan rempah-rempah pilihan hingga bumbu meresap sempurna, menghasilkan cita rasa gurih, pedas, dan kaya rempah." },
+        { id: 6, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Dendeng Balado", category: "Daging", description: "Irisan tipis daging sapi yang digoreng kering hingga renyah, lalu disiram dengan sambal balado khas Padang yang pedas dan segar, dibuat dari cabai merah besar dan tomat." },
+        { id: 7, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Gulai Cincang Sapi", category: "Daging", description: "Potongan daging sapi yang dimasak dalam kuah gulai berbumbu santan kental dengan aroma rempah yang kuat, menciptakan rasa gurih yang menggugah selera." },
+        { id: 8, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Dendeng Lambok", category: "Daging", description: "Daging sapi yang dimasak dengan cara direbus lalu digoreng hingga empuk dan juicy, kemudian disajikan dengan bumbu rempah dan sambal khas Minang." },
+        { id: 9, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Ikan Nila Dabu", category: "Ikan", description: "Ikan nila segar yang digoreng hingga renyah, disajikan dengan sambal dabu-dabu khas yang terdiri dari irisan cabai, tomat, dan bawang merah, memberikan rasa pedas, segar, dan gurih yang menggugah selera." },
+        { id: 10, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Udang Saus Padang", category: "Udang" },
+        { id: 11, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Udang Saus Padang", category: "Udang" },
+        { id: 12, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Udang Saus Padang", category: "Udang" },
+        { id: 13, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Udang Saus Padang", category: "Udang" },
+        { id: 14, price: 3, image: require("../assets/dendengbalado.jpg"), name: "Udang Saus Padang", category: "Udang" }
     ];
     
     const updateQuantity = (id, amount) => {
@@ -71,7 +71,7 @@ function OrderBO(){
     };
 
     return(
-        <div className='order-page' style={{width: "100vw", maxHeight: "100vh"}}>
+        <div className='order-page' style={{maxWidth: "100vw", maxHeight: "100vh"}}>
             <div className="top-bar">
                 <h1>Padangku</h1>
                 <div>Profile</div>
@@ -125,8 +125,8 @@ function OrderBO(){
                     </div>
 
                 </div>
-                <div style={{width: "40vw", display: "flex", flexDirection: "column", backgroundColor: "#FFFFFF", alignItems: "center", borderRadius: "15px", marginBottom: "5%"}}>
-                    <div style={{display:"flex",  width: "100%", padding: "5px"}}>
+                <div style={{width: "40vw", maxHeight: "630px", display: "flex", flexDirection: "column", backgroundColor: "#FFFFFF", alignItems: "center", borderRadius: "15px", marginBottom: "5%"}}>
+                    <div style={{display:"flex",  padding: "5px", fontWeight: "700", fontSize: "1rem"}}>
                         1
                         Purchase Receipt
                         3
@@ -200,7 +200,7 @@ function OrderBO(){
                         <p className="total">Grand Total <span>Rp. {total}</span></p>
                     </div>
 
-                    <button style={{position: "absolute", bottom: "55px", display:"flex", justifyContent: "space-between", width: "26%", textAlign: "center !important"}}>Send Order</button>
+                    <button style={{position: "absolute", bottom: "25px", display:"flex", justifyContent: "space-between", width: "26%", textAlign: "center", alignContent: "center"}}>Send Order</button>
                 </div>
             </div>
         </div>

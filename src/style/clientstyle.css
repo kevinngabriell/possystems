@@ -29,8 +29,10 @@
 .order-page {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    max-height: 100vh;
     background-color: #FAF5EF;
+    overflow-x: none;
+    overflow-y: none;
 }
 
 /* Category Item Styling */

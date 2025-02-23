@@ -4,6 +4,7 @@ import Order from "./client/Order";
 import ConfirmOrder from "./client/ConfirmOrder";
 import Login from "./backoffice/Login";
 import OrderBO from "./backoffice/OrderBO";
+import Dashboard from "./backoffice/Dashboard";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         
         <Route path="/" element={<Login/>}/>
         <Route path="/BO/order" element={<OrderBO/>}/>
+        <Route path="/BO/dashboard" element={<Dashboard/>}/>
       </Routes>
 
   );

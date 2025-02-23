@@ -23,8 +23,15 @@
 }
 
 .contact-area{
-    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
     bottom: 30px;
+}
+
+.contact-area hr{
+    height: 20px;
 }
 
 .order-page .top-bar{
@@ -68,6 +75,7 @@
 }
 
 .customer-info {
+    padding-left: 13px;
     margin-bottom: 4%;
     width: 100%;
     display: flex;
@@ -96,7 +104,7 @@
     border-radius: 15px;
     padding: 10px;
     width: 85%;
-    height: 36%;
+    height: 34%;
     overflow-y: auto;
     white-space: nowrap;
     scroll-behavior: smooth;
@@ -106,8 +114,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 0;
-    height: 20%;
+    padding: 8px;
+    /* height: 20%; */
+    /* background-color: #ec6c6c; */
 }
   
 .order-image img{
@@ -120,7 +129,7 @@
 .order-details h4 {
     margin: 0;
     padding-left: 5px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .order-details p {
@@ -132,9 +141,9 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    /* background-color: #666; */
     align-items: center;
-    justify-items: center;
+    justify-items: right;
+    font-size: 0.8rem;
 }
   
 .order-actions button {
@@ -156,6 +165,7 @@
     padding: 10px;
     text-align: left;
     width: 85%;
+    font-size: 0.7rem;
 }
   
   .order-summary p {
@@ -167,6 +177,14 @@
   .order-summary .total {
     font-weight: bold;
   }
+
+.order-page .list-category{
+    padding-left: 15px;
+}
+
+.order-page .list-category .category-item.active{
+    border-bottom: 2px solid #ec6c6c;
+}
 
 .order-page .list-category .category-item{
     color: black !important;
@@ -191,6 +209,15 @@
     text-align: left;
 }
 
+.order-page .menu-area .title{
+    font-size: 1rem;
+}
+
+.order-page .menu-area p{
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
 .order-page .menu-area .menu-item .menu-actions{
     margin-top: 10px;
 }
@@ -202,9 +229,10 @@
 
 .order-page .menu-area .menu-item .menu-actions .quantity{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 10px;
+    font-size: 0.7rem;
 }
 
 .order-page .menu-area .menu-item .menu-actions .quantity button{
