@@ -26,3 +26,188 @@
     position: fixed;
     bottom: 30px;
 }
+
+.order-page .top-bar{
+    margin-bottom: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-page .top-bar h1{
+    font-size: 2rem;
+    padding-left: 2%;
+}
+
+.order-toggle {
+    display: flex;
+    background: white;
+    border: 2px solid #f5a5a5;
+    border-radius: 999px;
+    max-width: 100%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+  
+/* Override global button styles only inside .order-toggle */
+.order-toggle .toggle-button {
+    background: transparent; /* Reset global button styles */
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 999px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+  
+.order-toggle .toggle-button.active {
+    background: #ec6c6c !important; /* Ensure it overrides global styles */
+    color: white !important;
+}
+
+.customer-info {
+    margin-bottom: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.customer-info label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding-bottom: 3%;
+    color: #666;
+}
+  
+.customer-info input {
+    width: 85%;
+    border: 2px solid #f5a5a5;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.order-list {
+    border: 2px solid #f5a5a5;
+    border-radius: 15px;
+    padding: 10px;
+    width: 85%;
+    height: 36%;
+    overflow-y: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+  
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    height: 20%;
+}
+  
+.order-image img{
+    width: 50px;
+    height: 50px;
+    background: #ec6c6c;
+    border-radius: 10px;
+}
+  
+.order-details h4 {
+    margin: 0;
+    padding-left: 5px;
+    font-size: 1.3rem;
+}
+
+.order-details p {
+    margin: 5px;
+    font-size: 0.6rem;
+}
+  
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* background-color: #666; */
+    align-items: center;
+    justify-items: center;
+}
+  
+.order-actions button {
+    background: #ddd;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.order-actions span {
+    margin: 0 5px;
+}
+
+.order-summary {
+    margin-top: 10px;
+    border: 2px solid #f5a5a5;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: left;
+    width: 85%;
+}
+  
+  .order-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .order-summary .total {
+    font-weight: bold;
+  }
+
+.order-page .list-category .category-item{
+    color: black !important;
+}
+
+.order-page .menu-area{
+    max-height: 600px; /* Set desired height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 15px;
+}
+
+.order-page .menu-area .menu-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.order-page .menu-area .menu-item{
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.order-page .menu-area .menu-item .menu-actions{
+    margin-top: 10px;
+}
+
+.order-page .menu-area .menu-item .menu-actions .add-btn{
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.order-page .menu-area .menu-item .menu-actions .quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-page .menu-area .menu-item .menu-actions .quantity button{
+    padding: 10px;
+    border-radius: 10px;
+}
