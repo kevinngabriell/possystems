@@ -180,6 +180,11 @@
 
 .order-page .list-category{
     padding-left: 15px;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
 .order-page .list-category .category-item.active{

@@ -53,7 +53,7 @@ function Order() {
                         className="search-area"
                     />
                 </div>
-                <div className='list-category'>
+                <div className='list-category-client'>
                     {['Semua Menu', 'Ayam', 'Daging', 'Ikan', 'Udang'].map(category => (
                         <div 
                             key={category} 

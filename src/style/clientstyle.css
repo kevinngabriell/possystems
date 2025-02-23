@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-.list-category{
+.list-category-client{
     display: flex;
     gap: 6px;
     overflow-x: auto;
@@ -17,11 +17,11 @@
     scroll-behavior: smooth;
 }
 
-.list-category::-webkit-scrollbar {
+.list-category-client::-webkit-scrollbar {
     display: none;
 }
   
-.list-category {
+.list-category-client {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

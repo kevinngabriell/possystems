@@ -20,7 +20,7 @@ function Login(){
     }
 
     return(
-        <div className='order-page' style={{width: "100vw", maxHeight: "100vh", display: "flex", flexDirection: "row"}}>
+        <div className='order-page' style={{width: "100vw", height: "100vh", display: "flex", flexDirection: "row"}}>
             <div style={{width: "100vw", maxHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center"}}>
                 Login ye
             </div>
