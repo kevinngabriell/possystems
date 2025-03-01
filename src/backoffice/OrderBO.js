@@ -76,8 +76,8 @@ function OrderBO(){
                 <h1>Padangku</h1>
                 <div>Profile</div>
             </div>
-            <div style={{display: "flex", maxHeight: "100vh"}}>
-                <div style={{width: "100vw", maxHeight: "100vh", display: "flex", flexDirection: "column"}}>
+            <div style={{display: "flex", maxHeight: "100vh", maxWidth: "100vw", overflowY: "hidden" , gap: "20px"}}>
+                <div style={{width: "74vw", maxHeight: "100vh", display: "flex", flexDirection: "column"}}>
                     
                     {/* Menu Category List */}
                     <div className='list-category'>
@@ -125,7 +125,7 @@ function OrderBO(){
                     </div>
 
                 </div>
-                <div style={{width: "40vw", maxHeight: "630px", display: "flex", flexDirection: "column", backgroundColor: "#FFFFFF", alignItems: "center", borderRadius: "15px", marginBottom: "5%"}}>
+                <div style={{width: "23vw", height: "100vh", display: "flex", flexDirection: "column", backgroundColor: "#FFFFFF", alignItems: "center", borderRadius: "15px", marginBottom: "5%"}}>
                     <div style={{display:"flex",  padding: "5px", fontWeight: "700", fontSize: "1rem"}}>
                         1
                         Purchase Receipt
@@ -200,7 +200,7 @@ function OrderBO(){
                         <p className="total">Grand Total <span>Rp. {total}</span></p>
                     </div>
 
-                    <button style={{position: "absolute", bottom: "25px", display:"flex", justifyContent: "space-between", width: "26%", textAlign: "center", alignContent: "center"}}>Send Order</button>
+                    <button style={{position: "absolute", bottom: "25px", display:"flex", justifyContent: "space-between", width: "19%", textAlign: "center", alignContent: "center"}}>Send Order</button>
                 </div>
             </div>
         </div>
