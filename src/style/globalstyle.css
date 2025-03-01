@@ -1,5 +1,5 @@
 :root{
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
 :root h1{

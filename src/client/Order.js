@@ -41,7 +41,7 @@ function Order() {
     };
 
     return (
-        <div className='order-page'>
+        <div className='order-page' style={{minHeight: "100vh"}} >
             {/* Header Order */}
             <div className='header-area'>
                 <div>Nomor Meja: {tableId}</div>
