@@ -56,19 +56,31 @@ function Dashboard(){
             <div style={{width: "85vw"}}>
                 <h1 style={{fontSize: "1.4rem"}}>PadangKu Dashboard</h1>
 
-
                 <div style={{marginTop: "2%", display: "flex", width: "100%", justifyContent: "space-between", gap: "20px"}}>
                     <div style={{width: "100%", border: "1px solid red", borderRadius: "6px", padding: "1%"}}>
-                        <h3>Total Sales</h3>
+                        <h3 style={{marginBottom: "5%"}}>Total Sales</h3>
+                        <p>Rp. 20.000.00</p>
                     </div>
                     <div style={{width: "100%", border: "1px solid red", borderRadius: "6px", padding: "1%"}}>
-                        <h3>Orders</h3>
+                        <h3 style={{marginBottom: "5%"}}>Orders</h3>
+                        <p>Rp. 20.000.00</p>
                     </div>
                     <div style={{width: "100%", border: "1px solid red", borderRadius: "6px", padding: "1%"}}>
-                        <h3>Stock Status</h3>
+                        <h3 style={{marginBottom: "5%"}}>Stock Status</h3>
+                        <p>Rp. 20.000.00</p>
                     </div>
                     <div style={{width: "100%", border: "1px solid red", borderRadius: "6px", padding: "1%"}}>
-                        <h3>Customers</h3>
+                        <h3 style={{marginBottom: "5%"}}>Customers</h3>
+                        <p>Rp. 20.000.00</p>
+                    </div>
+                </div>
+
+                <div style={{display: "flex", marginTop: "2%", width: "100%", justifyContent: "space-between", gap: "50px"}}>
+                    <div style={{width: "100%", border: "1px solid red", borderRadius: "6px", padding: "1%"}}>
+                        card 1
+                    </div>
+                    <div style={{width: "100%", border: "1px solid red", borderRadius: "6px", padding: "1%"}}>
+                        card 2
                     </div>
                 </div>
             </div>

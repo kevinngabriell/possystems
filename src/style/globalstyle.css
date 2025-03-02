@@ -7,8 +7,13 @@
     margin-bottom: 0px;
 }
 
+:root h3{
+    margin: 0;
+}
+
 :root p {
     font-weight: 300;
+    margin: 0;
 }
 
 :root button{
