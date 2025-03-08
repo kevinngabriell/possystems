@@ -1,3 +1,4 @@
+import { Search } from "lucide-react";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -29,7 +30,16 @@ function ConfirmOrder(){
                 <div>
 
                 </div>
-                <div className="bottom-area" style={{ width: "360px", backgroundColor: "#FFFFFF" }}>
+                <div className="bottom-area" style={{ paddingTop: "15px", backgroundColor: "#FFFFFF", height: "fit-content" }}>
+                    <div className="voucher-container">
+                        <Search className="search-icon" size={20} />
+                        <input
+                            type="text"
+                            className="voucher-area"
+                            placeholder="Masukkan voucher anda disini"
+                            style={{fontSize: "0.7rem"}}
+                        />
+                    </div>
                     <div className="cart-row">
                         <div>Qty</div>
                         <div>{jumlahPesanan} item</div>
@@ -54,7 +64,9 @@ function ConfirmOrder(){
                         <div>Grand Total</div>
                         <div>Rp. 280.000</div>
                     </div>
-                    <button className="cart-button" style={{ marginTop: "10px" }}>Konfirmasi Pesanan</button>
+                    <div style={{display:"flex", justifyContent: "center", }}>
+                        <button className="cart-button" style={{marginTop: "10px", paddingLeft: "20px", paddingRight: "20px"}}>Konfirmasi Pesanan</button>
+                    </div>
                 </div>
             </div>
         </div>

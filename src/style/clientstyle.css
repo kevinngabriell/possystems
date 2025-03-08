@@ -3,8 +3,7 @@
     border-radius: 0px 0px 20px 20px;
     border: 0px;
     color: #FFFFFF;
-    padding: 25px 5px 25px 15px;
-    font-size: 1rem;
+    padding: 25px 25px 25px 15px;
     font-weight: 700;
     overflow: hidden;
 }
@@ -15,6 +14,7 @@
     overflow-x: auto;
     white-space: nowrap;
     scroll-behavior: smooth;
+    font-size: 0.7rem;
 }
 
 .list-category-client::-webkit-scrollbar {
@@ -37,7 +37,7 @@
 
 /* Category Item Styling */
 .category-item {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: white;
     padding: 5px 10px;
@@ -65,7 +65,7 @@
     border-radius: 20px;
     padding: 4px;
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
     border: 2px solid white;
 }
 
@@ -115,16 +115,18 @@
 
 .bottom-area {
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     width: 100%;
-    padding: 15px;
 }
 
 .cart-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.7rem;
 }
 
 .grand-total {
@@ -156,4 +158,28 @@
 .menu-item .desc {
     margin-top: 7%;
     font-size: 0.6rem;
+}
+
+.voucher-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid black;
+}
+
+.voucher-area {
+    width: 100vw;
+    background: transparent;
+    border: 2px #FFFFFF;
+    color: black;
+    outline: none;
+    padding: 7px;
+    padding-left: 15px;
+    font-size: 1rem;
 }

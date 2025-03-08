@@ -44,13 +44,14 @@ function Order() {
         <div className='order-page' style={{minHeight: "100vh"}} >
             {/* Header Order */}
             <div className='header-area'>
-                <div>Nomor Meja: {tableId}</div>
+                <div style={{fontSize: "1rem"}}>Nomor Meja: {tableId}</div>
                 <div className="search-container">
                     <Search className="search-icon" size={20} />
                     <input
                         type="text"
                         placeholder="Cari makan enak disini aja"
                         className="search-area"
+                        style={{fontSize: "0.7rem"}}
                     />
                 </div>
                 <div className='list-category-client'>
@@ -89,7 +90,7 @@ function Order() {
             </div>
 
             {/* Fixed Bottom Button */}
-            <div className='bottom-area'>
+            <div className='bottom-area' style={{display: "flex", justifyContent: "center"}}>
                 <button className='cart-button' onClick={handleOnClick}>
                     Belum ada barang di keranjang
                 </button>

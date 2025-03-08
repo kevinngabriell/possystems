@@ -83,6 +83,15 @@ function Dashboard(){
                         card 2
                     </div>
                 </div>
+
+                <div>
+                    <h3>Quick Actions</h3>
+                    <div style={{width: "100%", display: "flex", justifyContent: "space-between", gap: "50px"}}>
+                        <div>Action 1</div>
+                        <div>Action 2</div>
+                        <div>Action 1</div>
+                    </div>
+                </div>
             </div>
         </div>
     );
