@@ -8,6 +8,7 @@ import Sales from "./backoffice/Sales";
 import Stocks from "./backoffice/Stocks";
 import Rnd from "./backoffice/RnD";
 import Order from "./client/Order";
+import Menu from "./backoffice/Menu";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/BO/order" element={<OrderBO/>}/>
         <Route path="/BO/dashboard" element={<Dashboard/>}/>
         <Route path="/BO/sales" element={<Sales/>}/>
+        <Route path="/BO/menu" element={<Menu/>}/>
         <Route path="/BO/stocks" element={<Stocks/>}/>
         <Route path="/BO/RnD" element={<Rnd/>}/>
       </Routes>

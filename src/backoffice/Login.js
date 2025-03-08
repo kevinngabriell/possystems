@@ -26,7 +26,7 @@ function Login(){
             </div>
             <div style={{width: "100vw", maxHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
                 <h1>Padangku</h1>
-                <p style={{width: "70%", textAlign: "center", marginBottom: "5%"}}>Please insert your credentials to login into our awesome pos system hehe</p>
+                <p style={{width: "70%", textAlign: "center", marginTop: "2%", marginBottom: "5%", fontSize: "0.8rem"}}>Please insert your credentials to login into our awesome pos system hehe</p>
                 {/* Employee ID Area */}
                 <div className="login-container">
                     <input
@@ -53,12 +53,12 @@ function Login(){
                 </button>
 
                 <div className="contact-area">
-                    <div style={{display: "flex", alignItems: "center", gap: "10px", color: "#A4A8B1"}}>
+                    <div style={{display: "flex", alignItems: "center", gap: "10px", color: "#A4A8B1", fontSize: "0.7rem"}}>
                         <img src={callVector}></img>
                         021-111-111
                     </div>
                     <hr/>
-                    <div style={{display: "flex", alignItems: "center", gap: "10px" , color: "#A4A8B1"}}>
+                    <div style={{display: "flex", alignItems: "center", gap: "10px" , color: "#A4A8B1" , fontSize: "0.7rem"}}>
                         <img src={emailVector}></img>
                         helpcenter@pos.com
                     </div>
