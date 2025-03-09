@@ -1,78 +1,23 @@
-import { faTachometerAlt, faChartLine, faFlask, faCogs, faSignOutAlt, faHome, faMoneyBill, faHamburger, faOutdent, faSignOut, faStop, faBox } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import LeftNavBar from '../components/LeftNavBar';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
 
 function Dashboard(){
     const navigate = useNavigate();
 
-    const handleLogout = () => {
-        navigate('/')
-    } 
-
-    const handleDashboard = () => {
-        navigate('/BO/Dashboard')
-    }
-
-    const handleSales = () => {
-        navigate('/BO/sales')
-    }
-
-    const handleMenu = () => {
-        navigate('/BO/menu')
-    }
-
-    const handleStocks = () => {
-        navigate('/BO/stocks')
-    }
-
-    const handleRnD = () => {
-        navigate('/BO/rnd')
-    }
-
-
     return(
         <div className="order-page" style={{display: "flex", flexDirection: "row", width: "100vw", minHeight: "100vh"}}>
-
-            <div style={{width: "12vw", paddingLeft: "1.5%", paddingTop: "2%", backgroundColor: "#FFF"}}>
-                {/* List Area Of Menu */}
-                <ul style={{margin: "0%", padding: "0%", fontSize: "0.9rem", fontWeight: "600"}}>
-                    <li onClick={handleDashboard} style={{ display: "flex", alignItems: "center", cursor: "pointer", listStyleType: "none", minHeight: "40px" }}>
-                        <FontAwesomeIcon icon={faHome} style={{ marginRight: "10px" }} />
-                        Dashboard
-                    </li>
-                    <li onClick={handleSales} style={{ display: "flex", alignItems: "center", cursor: "pointer", listStyleType: "none", minHeight: "40px"  }}>
-                        <FontAwesomeIcon icon={faMoneyBill} style={{ marginRight: "10px" }} />
-                        Sales
-                    </li>
-                    <li onClick={handleMenu} style={{ display: "flex", alignItems: "center", cursor: "pointer", listStyleType: "none", minHeight: "40px"  }}>
-                        <FontAwesomeIcon icon={faMoneyBill} style={{ marginRight: "10px" }} />
-                        Menu
-                    </li>
-                    <li onClick={handleRnD} style={{ display: "flex", alignItems: "center", cursor: "pointer", listStyleType: "none", minHeight: "40px"  }}>
-                        <FontAwesomeIcon icon={faHamburger} style={{ marginRight: "10px" }} />
-                        Rnd
-                    </li>
-                    <li onClick={handleRnD} style={{ display: "flex", alignItems: "center", cursor: "pointer", listStyleType: "none", minHeight: "40px"  }}>
-                        <FontAwesomeIcon icon={faBox} style={{ marginRight: "10px" }} />
-                        Stocks
-                    </li>
-                    <li onClick={handleLogout} style={{color: "red",  cursor: "pointer", position: "absolute", bottom: "0", marginBottom: "3%", listStyleType: "none" }}>
-                        <FontAwesomeIcon icon={faSignOut} style={{ marginRight: "10px", color: "red", fontWeight: "800" }} />
-                        Logout
-                    </li>
-                </ul>
-            </div>
+            <LeftNavBar/>
 
             <div style={{width: "85vw", paddingLeft: "2%", paddingRight: "2%"}}>
                 <h1 style={{fontSize: "1.4rem"}}>PadangKu Dashboard</h1>
 
                 <div style={{marginTop: "2%", display: "flex", width: "100%", justifyContent: "space-between", gap: "20px", marginBottom: "3%"}}>
-                    <div style={{display: "flex", gap: "15px", width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%"}}>
+                    <div style={{display: "flex", gap: "10px", width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%", alignItems: "center"}}>
+                        <FontAwesomeIcon icon={faMoneyBillWave}/>
                         <div>
-                            <p>aaa</p>
-                        </div>
-                        <div>
-                            <h3 style={{marginBottom: "10%"}}>Total Sales</h3>
+                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
                             <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
                         </div>
                     </div>
@@ -81,7 +26,7 @@ function Dashboard(){
                             <p>aaa</p>
                         </div>
                         <div>
-                            <h3 style={{marginBottom: "5%"}}>Total Sales</h3>
+                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
                             <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
                         </div>
                     </div>
@@ -90,7 +35,7 @@ function Dashboard(){
                             <p>aaa</p>
                         </div>
                         <div>
-                            <h3 style={{marginBottom: "5%"}}>Total Sales</h3>
+                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
                             <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
                         </div>
                     </div>
@@ -99,7 +44,7 @@ function Dashboard(){
                             <p>aaa</p>
                         </div>
                         <div>
-                            <h3 style={{marginBottom: "5%"}}>Total Sales</h3>
+                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
                             <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
                         </div>
                     </div>
