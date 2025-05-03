@@ -7,7 +7,7 @@ function Dashboard(){
     const navigate = useNavigate();
 
     return(
-        <div className="order-page" style={{display: "flex", flexDirection: "row", width: "100vw", minHeight: "100vh"}}>
+        <div>
             <LeftNavBar/>
 
             <div style={{width: "85vw", paddingLeft: "2%", paddingRight: "2%"}}>

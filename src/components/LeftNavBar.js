@@ -42,18 +42,26 @@ function LeftNavBar(){
                 </li>
                 <li onClick={handleSales}> 
                     <FontAwesomeIcon icon={faMoneyBill1Wave}/>
-                    Sales
+                    Menu
                 </li>
                 <li onClick={handleMenu}>
                     <FontAwesomeIcon icon={faRectangleList}/>
-                    Menu
+                    Orders
                 </li>
                 <li onClick={handleRnD}>
-                    RnD
+                    Table
                 </li>
                 <li onClick={handleStocks}>
                     <FontAwesomeIcon icon={faWarehouse}/>
-                    Stocks
+                    Inventory
+                </li>
+                <li onClick={handleStocks}>
+                    <FontAwesomeIcon icon={faWarehouse}/>
+                    Report
+                </li>
+                <li onClick={handleStocks}>
+                    <FontAwesomeIcon icon={faWarehouse}/>
+                    Settings
                 </li>
                 <li onClick={handleLogout}>
                     <FontAwesomeIcon icon={faSignOut}/>

@@ -1,9 +1,13 @@
 :root{
-    min-height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    overflow-x: none;
+    overflow-y: none;
 }
 
 :root h1{
-    font-size: 2rem;
+    font-size: 2.9rem;
     margin-bottom: 0px;
 }
 
@@ -14,6 +18,10 @@
 :root p {
     font-weight: 300;
     margin: 0;
+}
+
+:root hr{
+    color: A4A8B1;
 }
 
 :root button{

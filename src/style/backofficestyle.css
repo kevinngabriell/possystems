@@ -1,24 +1,64 @@
-.login-container{
-    margin-top: 15px;
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
-    background: #FFFFFF; 
-    border-radius: 10px;
-    padding: 4px;
-    width: 100%;
-    max-width: 350px;
-    border: 2px solid white;
-}
+/* Login Page Styling */
 
 .login-area{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    overflow-y: hidden;
     color: black;
     width: 100vw;
     background: transparent;
     border: 2px #FFFFFF;
     outline: none;
-    padding: 7px;
-    padding-left: 15px;
+    font-size: 0.8rem;
+}
+
+.login-photo-area{
+    width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-area{
+    width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-area p {
+    width: 50%;
+    text-align: center;
+    margin-top: 2%; 
+    margin-bottom: 5%;
+    font-size: 1rem;
+}
+
+.login-container{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background: #F9FAFB; 
+    border-radius: 10px;
+    padding: 4px;
+    width: 100%;
+    max-width: 450px;
+    height: 40px;
+    border: 1px solid #D1D5DB;
+}
+
+.login-area-form{
+    background: transparent;
+    border: 2px #FFFFFF;
+    outline: none;
+    width: 100vw;
     font-size: 0.8rem;
 }
 
@@ -26,13 +66,50 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    position: absolute;
-    bottom: 30px;
+    margin-top: 30px;
 }
 
 .contact-area hr{
     height: 20px;
 }
+
+@media only screen and (max-width: 1200px) {
+    .login-area{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .login-photo-area{
+        display: none;
+    }
+
+    .login-form-area{
+        overflow-x: none;
+        overflow-y: none;
+        width: 80vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        padding: 5%;
+    }
+
+    .login-form-area h1{
+        font-size: 1.5rem;
+    }
+
+    .login-form-area p {
+        margin-top: 5%;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+/* End of Login Page Styling  */
 
 .order-page .top-bar{
     margin-bottom: 1%;

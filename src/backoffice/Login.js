@@ -1,9 +1,10 @@
 import "../style/globalstyle.css";
-import "../style/backofficestyle.css"
+import "../style/backofficestyle.css";
 import { useNavigate } from "react-router-dom";
 import emailVector from "../assets/email.png";
 import callVector from "../assets/call.png";
 import { useState } from "react";
+import loginPhoto from "../assets/login.png";
 
 function Login(){
     const navigate = useNavigate();
@@ -12,6 +13,7 @@ function Login(){
 
     const handleLoginOnClick = () => {
         // navigate("/BO/order");
+        console.log(setEmployeeID);
         if(employeeID === "order"){
             navigate("/BO/order");
         } else if (employeeID === "owner"){
@@ -20,35 +22,36 @@ function Login(){
     }
 
     return(
-        <div className='order-page' style={{width: "100vw", height: "100vh", display: "flex", flexDirection: "row"}}>
-            <div style={{width: "100vw", maxHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                Login ye
+        <div className="login-area">
+            <div className="login-photo-area">
+                <img src={loginPhoto}></img>
             </div>
-            <div style={{width: "100vw", maxHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
-                <h1>Padangku</h1>
-                <p style={{width: "70%", textAlign: "center", marginTop: "2%", marginBottom: "5%", fontSize: "0.8rem"}}>Please insert your credentials to login into our awesome pos system hehe</p>
+            <div className="login-form-area">
+                <h1>PadangKu</h1>
+                <p>Please insert your authentication information 
+                to access padangku POS systems</p>
                 {/* Employee ID Area */}
                 <div className="login-container">
                     <input
                         type="text"
-                        placeholder="Input Employee ID"
-                        className="login-area"
+                        placeholder="Employee ID"
+                        className="login-area-form"
                         value={employeeID}
                         onChange={(e) => setEmployeeID(e.target.value)}
                     />
                 </div>
                 {/* Password Area */}
-                <div className="login-container" style={{marginBottom: "70px"}}>
+                <div className="login-container" style={{marginBottom: "40px"}}>
                     <input
                         type="password"
                         placeholder="Password"
-                        className="login-area"
+                        className="login-area-form"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
 
-                <button style={{width: "40%"}} onClick={handleLoginOnClick}>
+                <button style={{width: "50%", fontSize: "0.9rem"}} onClick={handleLoginOnClick}>
                     Login
                 </button>
 
