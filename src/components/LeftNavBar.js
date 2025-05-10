@@ -2,13 +2,19 @@ import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import dashboardIconActive from "../assets/DashboardActive.png";
+import dashboardIcon from "../assets/Dashboard.png";
+import menuIconActive from "../assets/MenuActive.png";
 import menuIcon from "../assets/Menu.png";
+import orderIconActive from "../assets/OrdersActive.png";
 import orderIcon from "../assets/Orders.png";
+import tableIconActive from "../assets/TableActive.png";
 import tableIcon from "../assets/Table.png";
+import inventoryIconActive from "../assets/InventoryActive.png";
 import inventoryIcon from "../assets/Inventory.png";
+import reportIconActive from "../assets/ReportActive.png";
 import reportIcon from "../assets/Report.png";
+import settingIconActive from "../assets/SettingsActive.png";
 import settingIcon from "../assets/Settings.png";
-import { useState } from "react";
 
 
 function LeftNavBar({activeMenu}){
@@ -22,8 +28,8 @@ function LeftNavBar({activeMenu}){
         navigate('/BO/Dashboard')
     }
 
-    const handleSales = () => {
-        navigate('/BO/sales')
+    const handleOrder = () => {
+        navigate('/BO/orderDashboard')
     }
 
     const handleMenu = () => {
@@ -34,18 +40,30 @@ function LeftNavBar({activeMenu}){
         navigate('/BO/stocks')
     }
 
-    const handleRnD = () => {
-        navigate('/BO/rnd')
+    const handleInventory = () => {
+        navigate('/BO/inventory')
+    }
+
+    const handleTable = () => {
+        navigate('/BO/table')
+    }
+
+    const handleReport = () => {
+        navigate('/BO/report')
+    }
+
+    const handleSettings = () => {
+        navigate('/BO/setting')
     }
 
     const menuItems = [
-        { label: 'Dashboard', icon: dashboardIconActive, handler: handleDashboard },
-        { label: 'Menu', icon: menuIcon, handler: handleMenu },
-        { label: 'Orders', icon: orderIcon, handler: handleSales },
-        { label: 'Table', icon: tableIcon, handler: handleRnD },
-        { label: 'Inventory', icon: inventoryIcon, handler: handleStocks },
-        { label: 'Report', icon: reportIcon, handler: handleStocks },
-        { label: 'Settings', icon: settingIcon, handler: handleStocks },
+        { label: 'Dashboard', activeIcon: dashboardIconActive, icon: dashboardIcon, handler: handleDashboard },
+        { label: 'Menu', activeIcon: menuIconActive, icon: menuIcon, handler: handleMenu },
+        { label: 'Orders', activeicon: orderIconActive,  icon: orderIcon, handler: handleOrder },
+        { label: 'Table', activeIcon: tableIconActive, icon: tableIcon, handler: handleTable },
+        { label: 'Inventory', activeIcon: inventoryIconActive, icon: inventoryIcon, handler: handleInventory },
+        { label: 'Report', activeIcon: reportIconActive, icon: reportIcon, handler: handleReport },
+        { label: 'Settings', activeIcon: settingIconActive, icon: settingIcon, handler: handleSettings },
         { label: 'Logout', icon: null, handler: handleLogout, isFontAwesome: true },
     ];
 
@@ -64,7 +82,7 @@ function LeftNavBar({activeMenu}){
                     {item.isFontAwesome ? (
                         <FontAwesomeIcon icon={faSignOut} />
                     ) : (
-                        <img src={item.icon} />
+                        <img src={activeMenu === item.label ? item.activeIcon : item.icon} alt={item.label} />
                     )}
                     {item.label}
                     </li>

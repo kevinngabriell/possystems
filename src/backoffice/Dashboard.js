@@ -2,33 +2,53 @@ import { useNavigate } from "react-router-dom";
 import LeftNavBar from '../components/LeftNavBar';
 import { useState } from "react";
 import SearchProfile from "../components/SearchProfile";
+import PopupMessage from "../components/popup";
 
 function Dashboard(){
     const navigate = useNavigate();
+    const [titlePopupMessage, setTitlePopupMessage] = useState("");
+    const [messagePopupMessage, setMessagePopupMessage] = useState("");
     const [activeMenu, setActiveMenu] = useState("Dashboard");
+    const [showDialog, setShowDialog] = useState(false);  
 
+    // setup for popup dialog
+    const handleCloseDialog = () => {
+        setShowDialog(false);
+    };
+
+    const popup = <PopupMessage onCloseDialog={handleCloseDialog} Title={titlePopupMessage} Message={messagePopupMessage} />;
+    // setup for popup dialog
+
+    const handleNewReservation = () => {
+        setShowDialog(true);
+        setTitlePopupMessage("Error");
+        setMessagePopupMessage("Fitur ini belum tersedia pada versi ini !!")
+    }
+    
     return(
         <div className="dashboard">
             <LeftNavBar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
             <div className="mainside">
+                {showDialog && popup}
+
                 {/* Search and profile area */}
                 <SearchProfile/>
 
                 <div style={{paddingLeft: "2%", paddingRight: "2%"}}>
 
-                    <div style={{display:"flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "30px"}}>
+                    <div className="twoitems">
                         <div>
                             <h1>Welcome, Mr Kevin</h1>
                             <p style={{marginTop: "2%"}}>Here's a quick overview of your business performance this month.</p>
                         </div>
                         <div>
-                            <button>Create a New Reservation</button>
+                            <button onClick={handleNewReservation}>Create a New Reservation</button>
                         </div>
                     </div>
 
-                    <div style={{marginTop: "2%",  display: "flex", width: "100%", justifyContent: "space-between", gap: "20px", marginBottom: "3%"}}>
+                    <div className="cardcontainer">
                         <div>
-                            <div style={{width: "100%", display:"flex", gap:"30px"}}>
+                            <div className="gapcard">
                                 {/* Card Top Menu */}
                                 <div className="card">
                                     <h1>Top Menu</h1>
