@@ -1,12 +1,17 @@
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
-import { faHome } from "@fortawesome/free-solid-svg-icons/faHome";
-import { faMoneyBill1Wave } from "@fortawesome/free-solid-svg-icons/faMoneyBill1Wave";
-import { faRectangleList } from "@fortawesome/free-solid-svg-icons/faRectangleList";
-import { faWarehouse } from "@fortawesome/free-solid-svg-icons/faWarehouse";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import dashboardIconActive from "../assets/DashboardActive.png";
+import menuIcon from "../assets/Menu.png";
+import orderIcon from "../assets/Orders.png";
+import tableIcon from "../assets/Table.png";
+import inventoryIcon from "../assets/Inventory.png";
+import reportIcon from "../assets/Report.png";
+import settingIcon from "../assets/Settings.png";
+import { useState } from "react";
 
-function LeftNavBar(){
+
+function LeftNavBar({activeMenu}){
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -33,40 +38,37 @@ function LeftNavBar(){
         navigate('/BO/rnd')
     }
 
+    const menuItems = [
+        { label: 'Dashboard', icon: dashboardIconActive, handler: handleDashboard },
+        { label: 'Menu', icon: menuIcon, handler: handleMenu },
+        { label: 'Orders', icon: orderIcon, handler: handleSales },
+        { label: 'Table', icon: tableIcon, handler: handleRnD },
+        { label: 'Inventory', icon: inventoryIcon, handler: handleStocks },
+        { label: 'Report', icon: reportIcon, handler: handleStocks },
+        { label: 'Settings', icon: settingIcon, handler: handleStocks },
+        { label: 'Logout', icon: null, handler: handleLogout, isFontAwesome: true },
+    ];
+
     return(
         <div className="leftnavbar">
             <ul className="leftnavbar-list">
-                <li onClick={handleDashboard}>
-                    <FontAwesomeIcon icon={faHome}/>
-                    Dashboard
-                </li>
-                <li onClick={handleSales}> 
-                    <FontAwesomeIcon icon={faMoneyBill1Wave}/>
-                    Menu
-                </li>
-                <li onClick={handleMenu}>
-                    <FontAwesomeIcon icon={faRectangleList}/>
-                    Orders
-                </li>
-                <li onClick={handleRnD}>
-                    Table
-                </li>
-                <li onClick={handleStocks}>
-                    <FontAwesomeIcon icon={faWarehouse}/>
-                    Inventory
-                </li>
-                <li onClick={handleStocks}>
-                    <FontAwesomeIcon icon={faWarehouse}/>
-                    Report
-                </li>
-                <li onClick={handleStocks}>
-                    <FontAwesomeIcon icon={faWarehouse}/>
-                    Settings
-                </li>
-                <li onClick={handleLogout}>
-                    <FontAwesomeIcon icon={faSignOut}/>
-                    Logout
-                </li>
+                {menuItems.map((item) => (
+                    <li
+                    key={item.label}
+                    onClick={() => {
+                        // setActiveMenu(item.label);
+                        item.handler();
+                    }}
+                    className={activeMenu === item.label ? 'active' : ''}
+                    >
+                    {item.isFontAwesome ? (
+                        <FontAwesomeIcon icon={faSignOut} />
+                    ) : (
+                        <img src={item.icon} />
+                    )}
+                    {item.label}
+                    </li>
+                ))}
             </ul>
         </div>
     )

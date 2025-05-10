@@ -6,7 +6,7 @@ function Menu(){
 
     return(
         <div className="order-page" style={{display: "flex", flexDirection: "row", width: "100vw", minHeight: "100vh"}}>
-            <LeftNavBar/>   
+            <LeftNavBar activeMenu={"Menu"}/>   
 
             <div style={{width: "85vw", paddingLeft: "2%", paddingRight: "2%"}}>
                 <h1 style={{fontSize: "1.4rem"}}>PadangKu Menu</h1>    

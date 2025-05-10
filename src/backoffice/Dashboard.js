@@ -1,72 +1,64 @@
 import { useNavigate } from "react-router-dom";
 import LeftNavBar from '../components/LeftNavBar';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoneyBillWave } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import SearchProfile from "../components/SearchProfile";
 
 function Dashboard(){
     const navigate = useNavigate();
+    const [activeMenu, setActiveMenu] = useState("Dashboard");
 
     return(
-        <div>
-            <LeftNavBar/>
+        <div className="dashboard">
+            <LeftNavBar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+            <div className="mainside">
+                {/* Search and profile area */}
+                <SearchProfile/>
 
-            <div style={{width: "85vw", paddingLeft: "2%", paddingRight: "2%"}}>
-                <h1 style={{fontSize: "1.4rem"}}>PadangKu Dashboard</h1>
+                <div style={{paddingLeft: "2%", paddingRight: "2%"}}>
 
-                <div style={{marginTop: "2%", display: "flex", width: "100%", justifyContent: "space-between", gap: "20px", marginBottom: "3%"}}>
-                    <div style={{display: "flex", gap: "10px", width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%", alignItems: "center"}}>
-                        <FontAwesomeIcon icon={faMoneyBillWave}/>
+                    <div style={{display:"flex", justifyContent: "space-between", alignItems: "center", marginTop: "20px", marginBottom: "30px"}}>
                         <div>
-                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
-                            <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
+                            <h1>Welcome, Mr Kevin</h1>
+                            <p style={{marginTop: "2%"}}>Here's a quick overview of your business performance this month.</p>
+                        </div>
+                        <div>
+                            <button>Create a New Reservation</button>
                         </div>
                     </div>
-                    <div style={{display: "flex", gap: "15px", width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%"}}>
+
+                    <div style={{marginTop: "2%",  display: "flex", width: "100%", justifyContent: "space-between", gap: "20px", marginBottom: "3%"}}>
                         <div>
-                            <p>aaa</p>
+                            <div style={{width: "100%", display:"flex", gap:"30px"}}>
+                                {/* Card Top Menu */}
+                                <div className="card">
+                                    <h1>Top Menu</h1>
+                                    <p>Top 3 best-selling items based on total sales and reviews in the last 30 days.</p>
+                                </div>
+                                {/* Card Top Menu */}
+
+                                {/* Card Top Branch */}
+                                <div className="card">
+                                    <h1>Top Branch</h1>
+                                    <p>Top 3 branches with the highest order volume and best reviews this month.</p>
+                                </div>
+                            </div>
+                        
+                            <div className="card" style={{marginTop:"30px", gap: "10px"}}>
+                                    space area
+                            </div>
                         </div>
-                        <div>
-                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
-                            <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
+
+                        {/* Card Sales Overview */}
+                        <div className="card">
+                            <h1>Sales Overview</h1>
+                            <p>Total revenue, order growth, and customer traffic trends over the last 30 days.</p>
                         </div>
+                        {/* Card Sales Overview */}
+
                     </div>
-                    <div style={{display: "flex", gap: "15px", width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%"}}>
-                        <div>
-                            <p>aaa</p>
-                        </div>
-                        <div>
-                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
-                            <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
-                        </div>
-                    </div>
-                    <div style={{display: "flex", gap: "15px", width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%"}}>
-                        <div>
-                            <p>aaa</p>
-                        </div>
-                        <div>
-                            <h3 style={{marginBottom: "8%"}}>Total Sales</h3>
-                            <p style={{fontSize: "0.8rem"}}>Rp. 20.000.000</p>
-                        </div>
-                    </div>
+
                 </div>
-
-                <div style={{display: "flex", width: "100%", justifyContent: "space-between", gap: "50px", marginBottom: "3%"}}>
-                    <div style={{width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%"}}>
-                        card 1
-                    </div>
-                    <div style={{width: "100%", backgroundColor: "#FFF", borderRadius: "6px", padding: "1%"}}>
-                        card 2
-                    </div>
-                </div>
-
-                <div style={{display: "flex", width: "100%", marginBottom: "3%", flexDirection: "column"}}>
-                    <h3>Quick Actions</h3>
-                    <div style={{width: "100%", display: "flex", justifyContent: "space-between", gap: "50px"}}>
-                        <div>Action 1</div>
-                        <div>Action 2</div>
-                        <div>Action 1</div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     );
